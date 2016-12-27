@@ -22,7 +22,7 @@ public class CollegeRegistration extends HttpServlet {
      */
     public CollegeRegistration() {
         super();
-        // TODO Auto-generated constructor stub test
+        // TODO Auto-generated constructor stub test sailesh
     }
 
 	/**
