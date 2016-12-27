@@ -1,0 +1,37 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from CollegeRegistrationService WSDL service -->
+
+  <service name="CollegeRegistration" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://logins"/>
+      <parameter name="wsdlServiceElement" value="CollegeRegistrationService"/>
+      <parameter name="schemaQualified" value="http://logins"/>
+      <parameter name="wsdlServicePort" value="CollegeRegistration"/>
+      <parameter name="className" value="logins.CollegeRegistrationSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="CollegeRegistration"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getDetails" qname="operNS:getDetails" xmlns:operNS="http://logins" soapAction="" >
+        <parameter qname="pns:collegename" xmlns:pns="http://logins" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:collegecode" xmlns:pns="http://logins" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:collegelocation" xmlns:pns="http://logins" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:collegeprincipalname" xmlns:pns="http://logins" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:collegeadminname" xmlns:pns="http://logins" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:collegeadminemailid" xmlns:pns="http://logins" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:collegecontactnumber" xmlns:pns="http://logins" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:collegealternativenumber" xmlns:pns="http://logins" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:collegeemailid" xmlns:pns="http://logins" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="getDetails"/>
+
+  </service>
+</deployment>
