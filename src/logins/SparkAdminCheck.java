@@ -88,6 +88,8 @@ public class SparkAdminCheck extends HttpServlet {
 						RequestDispatcher rd=request.getRequestDispatcher("newindex.jsp");
 						rd.forward(request, response);*/
 						out.print("Login Success");
+						/*RequestDispatcher rd=request.getRequestDispatcher("showrequests.jsp");
+						rd.forward(request, response);*/
 						
 					}else{
 						out.println("<script type=\"text/javascript\">");  

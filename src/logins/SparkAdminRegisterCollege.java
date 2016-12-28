@@ -59,7 +59,8 @@ public class SparkAdminRegisterCollege extends HttpServlet {
 		String collegenumber=request.getParameter("collegenumber");
 		String adminname=request.getParameter("adminname");
 		 String adminemailid = request.getParameter("adminemailid");// this is for sending email
-	        String password1 = request.getParameter("password1");// this is for sending email
+	        String collegealternativeno = request.getParameter("collegealternativeno");
+	        String collegeemailid = request.getParameter("collegeemailid");// this is for sending email
 	        try{
 				Properties prop=new Properties();
 	            String filename = "/database.properties";
@@ -81,16 +82,17 @@ public class SparkAdminRegisterCollege extends HttpServlet {
 	          int upt = statement.executeUpdate(s1);
 				PreparedStatement pstmt=con.prepareStatement("insert into collegesapproved(sparkid, username, password, collegename, collegecode, location, principalname, admin_name, admin_emailid, college_contactno, college_alternativeno, college_emailid) values(?,?,?,?,?,?,?,?,?,?,?,?)");
 				 pstmt.setString(1, sparkid);
-		          pstmt.setString(2, Password);
-		          pstmt.setString(3, username);
+		          pstmt.setString(3, Password);
+		          pstmt.setString(2, username);
 				 pstmt.setString(4, collegename);
 		          pstmt.setString(5, collegecode);
 		          pstmt.setString(6, location);
 		          pstmt.setString(7, principalname);
-		          pstmt.setString(8, location);
-		          pstmt.setString(9, collegenumber);
-		          pstmt.setString(10, adminname);
-		          pstmt.setString(11, adminemailid);
+		          pstmt.setString(8, adminname);
+		          pstmt.setString(9, adminemailid);
+		          pstmt.setString(10, collegenumber);
+		          pstmt.setString(11, collegealternativeno);
+		          pstmt.setString(12, collegeemailid);
 
 		          
 			
