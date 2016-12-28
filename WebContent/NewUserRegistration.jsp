@@ -97,7 +97,8 @@
 
                        
                     </div>
-                   
+                   <input type="hidden" name="collegealternativeno"  value=" <%=request.getParameter("collegealternativeno") %>" readonly="readonly">
+                   <input type="hidden" name="collegeemailid"  value=" <%=request.getParameter("collegeemailid") %>"  readonly="readonly">
                     <%-- <input type="hidden" name="subject" value="PASSWORD GENERATED FROM KNIT APP">
                     <input type="hidden" name="password1"  value="Your EmailId : <%=request.getParameter("email") %>  And Password : {{password}}" readonly="readonly">
 					 --%>
