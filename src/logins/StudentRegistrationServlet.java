@@ -71,7 +71,7 @@ public class StudentRegistrationServlet extends HttpServlet {
 	        String emailid = request.getParameter("emailid");
 	        
 	        if(qualification.equals("Inter")){
-	        	int batch_add = Integer.parseInt("batch");
+	        	int batch_add = Integer.parseInt(batch);
 	        	int batch_add_new = batch_add+4;
 	        	batch = batch+"-"+batch_add_new;
 	        	System.out.println(batch);

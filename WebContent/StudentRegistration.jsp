@@ -51,9 +51,9 @@ Student Name: <input type="text" name="studentname" placeholder="Student Name"/>
 DAteOfBirth: <input type="text" name="dob" placeholder="Please Enter as DDMMYYYY(Ex:01011992)"/> <br />
 Password: <input type="password" name="dob" placeholder="Don't Enter" readonly/> <br />
 Gender
-<input type="radio" name="gender" >male
-<input type="radio" name="gender" >female
-<input type="radio" name="gender" >others
+<input type="radio" name="gender" value="male">male
+<input type="radio" name="gender" value="female">female
+<input type="radio" name="gender" value="others">others
 <br>
 <select name="qualification">
 <option value="">Select Qualification</option>
